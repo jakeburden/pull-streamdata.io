@@ -15,7 +15,7 @@ var KEY = 'ODRlZDNmYmUtMDAxZC00NWJmLTgwMzQtNTkzMWJiYjFhYjVj'
 
 var SSE = streamdata(URL, KEY)
 
-// pull from streamdata.io 4 times and the closes the SSE
+// pull from streamdata.io 4 times and then closes the SSE
 pull(
   SSE,
   pull.take(4),
