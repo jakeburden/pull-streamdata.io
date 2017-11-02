@@ -2,7 +2,7 @@
 
 > streamdata.io server-sent events as a pull-stream source
 
-Creates a [pull-stream](https://github.com/pull-stream/pull-stream) source from [streamdata.io-events](https://github.com/jekrb/streamdata.io-events) sever-sent events in the browser (and hopefully node.js soon!)
+Creates a [pull-stream](https://github.com/pull-stream/pull-stream) source from [streamdata.io](https://github.com/jekrb/streamdata.io-events) sever-sent events (SSE) in the browser (and hopefully node.js soon!)
 
 ## Usage
 
