@@ -1,0 +1,22 @@
+{
+  "name": "pull-streamdata.io",
+  "version": "1.0.0",
+  "description": "streamdata.io server-sent events as a pull-stream source",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && budo test.js"
+  },
+  "keywords": ["streamdata.io", "pull", "pull-stream", "pull-streamdata.io", "SSE", "sever-sent events"],
+  "author": "Jake Burden <jake@doge.haus> <@o91tsjBgL0l0zs475aRWYSAXFxvirZS7VrXmirY/msI=.ed25519>",
+  "license": "MIT",
+  "dependencies": {
+    "pull-pushable": "^2.1.1",
+    "streamdata.io-events": "^1.1.0"
+  },
+  "devDependencies": {
+    "budo": "^10.0.4",
+    "pull-stream": "^3.6.1",
+    "standard": "^10.0.3",
+    "tape": "^4.8.0"
+  }
+}
