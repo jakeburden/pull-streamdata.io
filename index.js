@@ -1,8 +1,8 @@
 var streamdata = require('streamdata.io-events')
 var Pushable = require('pull-pushable')
 
-function createSource (url, key, headers) {
-  var SSE = streamdata(url, key, headers)
+function createSource (url, appToken, headers, privateKey) {
+  var SSE = streamdata(url, appToken, headers, privateKey)
   var pushable = Pushable(true, function onEnd (err) {
     if (err) throw new Error(err)
     SSE.close()

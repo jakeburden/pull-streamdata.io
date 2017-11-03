@@ -2,7 +2,7 @@
 
 > streamdata.io server-sent events as a pull-stream source
 
-Creates a [pull-stream](https://github.com/pull-stream/pull-stream) source from [streamdata.io](https://github.com/jekrb/streamdata.io-events) sever-sent events (SSE) in the browser (and hopefully node.js soon!)
+Creates a [pull-stream](https://github.com/pull-stream/pull-stream) source from [streamdata.io](https://github.com/jekrb/streamdata.io-events) sever-sent events (SSE) in Node.js and the browser
 
 ## Usage
 
@@ -11,9 +11,9 @@ var streamdata = require('pull-streamdata.io')
 var pull = require('pull-stream')
 
 var URL = 'https://www.reddit.com/r/random.json?obey_over18=true'
-var KEY = 'ODRlZDNmYmUtMDAxZC00NWJmLTgwMzQtNTkzMWJiYjFhYjVj'
+var appToken = 'ODRlZDNmYmUtMDAxZC00NWJmLTgwMzQtNTkzMWJiYjFhYjVj'
 
-var SSE = streamdata(URL, KEY)
+var SSE = streamdata(URL, appToken)
 
 // pull from streamdata.io 4 times and then closes the SSE
 pull(
@@ -40,10 +40,11 @@ streamdataio.min.js:1 Closing the SSE Stream.
 var streamdata = require('pull-streamdata.io')
 ```
 
-### `streamdata(url, key, headers)`
+### `streamdata(url, appToken, headers, privateKey)`
 - url: (String) The rest endpoint you set https://streamdata.io to poll for changes.
-- key: (String) Your auth key from https://streamdata.io
+- appToken: (String) Your auth key from https://streamdata.io
 - headers: (Optional) (Array) Additional headers for the SSE
+- privateKey (Optional) (String): Your private auth key from streamdata.io if you chose to generate one
 
 ## Install
 
